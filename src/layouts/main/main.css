@@ -1,0 +1,63 @@
+.landing-container {
+  position: relative;
+  text-align: center;
+}
+
+.landing-picture {
+  height: 700px;
+  margin-top: 10%;
+  margin-left: 48%;
+  margin-right: auto;
+  border-radius: 150px;
+  width: 50%;  /* Ավելի ճիշտ չափում */
+  transition: transform 0.5s ease; /* Անիմացիա */
+}
+
+.landing-picture:hover {
+  transform: scale(1.05); /* Հիմնական նկարի փոքր չափի մեծացում */
+}
+
+.landing-text {
+  position: absolute;
+  top: 20%;
+  left: 25%;
+  width: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-family: 'Arial', sans-serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Տեքստի ստվեր՝ ավելի ընդգծված լինելու համար */
+}
+
+.landing-text h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #FFB373;
+  transition: color 0.3s ease;
+}
+
+.landing-text h1:hover {
+  color: #3A3A3A;
+}
+
+.landing-text p {
+  font-size: 1.3rem;
+  margin-top: 10px;
+  line-height: 1.8;
+  color: white;
+}
+
+.landing-text strong {
+  font-weight: bold;
+  color: #FFB373; /* Կենտրոնացված բառերին նույն գույնը */
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
