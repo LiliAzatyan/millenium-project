@@ -4,12 +4,12 @@
 }
 
 .landing-picture {
-  height: 700px;
+  height: 500px;
   margin-top: 10%;
   margin-left: 48%;
   margin-right: auto;
   border-radius: 150px;
-  width: 50%;  /* Ավելի ճիշտ չափում */
+  width: 45%;  /* Ավելի ճիշտ չափում */
   transition: transform 0.5s ease; /* Անիմացիա */
 }
 
@@ -19,7 +19,7 @@
 
 .landing-text {
   position: absolute;
-  top: 20%;
+  top: 30%;
   left: 25%;
   width: 50%;
   transform: translateX(-50%);

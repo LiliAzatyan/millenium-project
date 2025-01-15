@@ -1,0 +1,97 @@
+.general-content {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #f5f5f5; /* Հավասարեցված ֆոնի գույն */
+}
+
+.product-section-wrapper {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    padding: 20px 0;
+    width: 100%;
+    position: relative;
+    top: -10px;
+    background: #fff; /* Թեթև ֆոն */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 350px;
+    height: auto; /* Քարտի բարձրությունը ավտոմատ լինի */
+    background-color: #fafafa; /* Քարտի ֆոն */
+    border-radius: 15px; /* Փափուկ անկյուններ */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15); /* Հստակ ստվեր */
+    text-align: left;
+    position: relative;
+    padding: 20px; /* Ավելացված padding */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Անիմացիայի ազդեցություն */
+}
+
+.product-card p {
+    font-size: 16px;
+    color: #555;
+    margin: 0;
+    padding: 10px;
+    word-wrap: break-word; /* Մշակված տեքստի փխրունություն */
+    overflow: hidden; /* Մնացած տեքստը թաքցնում է */
+    text-overflow: ellipsis; /* Տեքստի ավելորդ մասը կրճատում է ... */
+    max-height: 100px; /* Սահմանափակում ենք բարձրությունը */
+}
+
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2); /* Որպես հետաքրքրություն ավելացնել */
+}
+
+.product-card img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    border-radius: 50%; /* Տեսքը ավելի հարմարավետ դարձնելու համար */
+}
+
+.product-card h3 {
+    font-size: 20px;
+    color: #FFB373; /* Դեղին գույն */
+    margin: 0 0 15px 0;
+    font-weight: bold;
+    text-transform: uppercase; /* Հեշտ ընթեռնելի և ավելի գրավիչ */
+}
+
+.product-section {
+    display: flex;
+    gap: 30px;
+    width: max-content;
+    animation: scrollProducts 25s linear infinite;
+}
+
+@keyframes scrollProducts {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-20%);
+    }
+}
+
+.pharmacy-essentials {
+    font-size: 50px;
+    background: #FFB373; /* Շեշտադրող դեղին */
+    color: #3A3A3A; /* Սև մուգ գույն */
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    font-weight: bold;
+}
