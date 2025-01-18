@@ -1,84 +1,88 @@
+/* Հիմնական ֆոն */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-image: url('/public/images/bg.jpeg'); /* Ֆոնային նկար */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Անշարժ ֆոն */
+  color: #fff; /* Տեքստի գույն՝ հարմարեցված ֆոնին */
+}
+
 /* Header */
-.header {
-  position: fixed;
-  width: 100%;
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  position: sticky;
   top: 0;
-  left: 0;
-  z-index: 50;
-  background-color: #3A3A3A;
-  color: white;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  z-index: 1000;
+  background: none;
+  transition: all 0.3s ease-in-out;
+  color: black;
 }
 
-/* Top Bar */
-.top-bar {
-  display: flex;
-  position: relative;
-  height: 40px;
-  background-color: white;
-  margin-bottom: 0;
-  z-index: 999; /* Բարձրացնում ենք top-bar-ի `z-index`-ը */
+.nav-container.scrolled {
+  background: #ffffff;
 }
 
-.left-panel {
-  height: 100%;
-  width: 30%;
-  background-color: #3A3A3A;
-  clip-path: polygon(0 0, 100% 0, 80% 100%, 0 100%);
+.nav-link {
+  color: black;
 }
 
-.contact-info {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  padding-left: 20px;
-  gap: 24px;
-  overflow-x: auto;
-}
-
-.info-item {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 14px;
-}
-
-.icon {
-  color: #FFB373;
-}
-
-.link {
-  color: #3A3A3A;
-  text-decoration: none;
-}
-
-.link:hover {
-  color: #FFB373;
-}
-
-.social-icons {
-  display: flex;
-  gap: 12px;
-  margin-left: 20px;
-  margin-left: 600px;
-}
-
-.social-icons .icon {
-  color: #ffb373; /* Icon-ների հիմնական գույնը */
+.logo {
   font-size: 24px;
-  transition: color 0.3s ease; /* Հարթ անցում hover-ի ժամանակ */
-  display: block;
+  font-weight: bold;
+  color: #ffffff;
 }
 
-.social-icons .icon:hover {
-  color: #3A3A3A; /* Hover-ի ժամանակ գույնը փոխվում է */
+.nav-link {
+  padding: 12px 24px;
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease, background-color 0.3s ease;
 }
 
+.nav-link:hover {
+  color: #E39B62;
+  background-color: rgba(227, 155, 98, 0.1);
+  border-radius: 4px;
+}
 
+.menu-toggle {
+  font-size: 30px;
+  color: #ffffff;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: none; /* Hidden on desktop */
+}
 
+/* Mobile-specific styles */
+@media (max-width: 1024px) {
+  .menu-toggle {
+    display: block;
+  }
 
+  .nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.9); /* Մուգ ֆոն մոբայլում */
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
 
+  .nav.nav-open {
+    display: flex;
+  }
 
-
-
-
+  .nav-link {
+    text-align: center;
+  }
+}

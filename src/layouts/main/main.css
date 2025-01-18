@@ -1,63 +1,61 @@
 .landing-container {
-  position: relative;
+  display: flex;
+  flex-direction: column; /* Հարմարվող դասավորություն */
+  align-items: center;
+  justify-content: center;
   text-align: center;
-}
-
-.landing-picture {
-  height: 500px;
-  margin-top: 10%;
-  margin-left: 48%;
-  margin-right: auto;
-  border-radius: 150px;
-  width: 45%;  /* Ավելի ճիշտ չափում */
-  transition: transform 0.5s ease; /* Անիմացիա */
-}
-
-.landing-picture:hover {
-  transform: scale(1.05); /* Հիմնական նկարի փոքր չափի մեծացում */
+  min-height: calc(100vh - 80px); /* Հաշվի առնելով header-ի բարձրությունը */
+  padding: 40px;
 }
 
 .landing-text {
-  position: absolute;
-  top: 30%;
-  left: 25%;
-  width: 50%;
-  transform: translateX(-50%);
-  color: white;
-  font-family: 'Arial', sans-serif;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Տեքստի ստվեր՝ ավելի ընդգծված լինելու համար */
+  color: #ffffff;
+  margin-bottom: 20px;
 }
 
 .landing-text h1 {
   font-size: 3.5rem;
   font-weight: 700;
   color: #FFB373;
-  transition: color 0.3s ease;
-}
-
-.landing-text h1:hover {
-  color: #3A3A3A;
+  margin-bottom: 20px;
 }
 
 .landing-text p {
-  font-size: 1.3rem;
-  margin-top: 10px;
+  font-size: 1.5rem;
+  color: #ffffff;
   line-height: 1.8;
+}
+
+.landing-image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.landing-image {
+  width: 90%;
+  max-width: 600px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+}
+
+.image-controls {
+  display: flex;
+  gap: 10px;
+}
+
+.image-controls button {
+  padding: 10px 15px;
+  font-size: 16px;
+  background-color: #FFB373;
   color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.landing-text strong {
-  font-weight: bold;
-  color: #FFB373; /* Կենտրոնացված բառերին նույն գույնը */
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.image-controls button:hover {
+  background-color: #E59460;
 }

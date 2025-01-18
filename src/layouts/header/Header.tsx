@@ -1,51 +1,62 @@
-import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaFacebook, FaInstagram } from "react-icons/fa";
-import NavBar from "../../components/nav-bar/NavBar";
-import React from "react";
+import { FaBars, FaPhoneAlt, FaTimes } from "react-icons/fa";
+import React, { useState, useEffect } from "react";
 import "./header.css";
 
 const Header: React.FC = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
-        <>
-      <header className="header">
-        <div className="top-bar">
-          <div className="left-panel"></div>
-          <div className="contact-info">
-            <div className="info-item">
-              <FaEnvelope className="icon" />
-              <a href="mailto:someone@example.com" className="link">
-                someone@example.com
-              </a>
+    <div className={`nav-container ${isScrolled ? "scrolled" : ""}`}>
+      <div className="logo" id="specific-logo">MyLogo</div>
+      <button
+        className="menu-toggle"
+        onClick={() => setIsOpen(!isOpen)}
+        aria-label="Toggle navigation"
+      >
+        {isOpen ? <FaTimes className="menu-icon" /> : <FaBars className="menu-icon" />}
+      </button>
+      <nav className={`nav ${isOpen ? "nav-open" : ""}`}>
+        <a href="#home" className="nav-link">Մեր մասին</a>
+        <a href="#features" className="nav-link">Ծառայություններ</a>
+        <a href="#contact" className="nav-link">Շինարարական գործընթաց</a>
+        <div
+          className={`dropdown ${isOpen ? "open" : ""}`}
+          onMouseLeave={() => setIsOpen(false)}
+        >
+          <button
+            className="dropdown-btn"
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            Ավարտած նախագծեր
+          </button>
+          {isOpen && (
+            <div className="dropdown-menu">
+              <a href="/project1" className="dropdown-item">Նախագիծ 1</a>
+              <a href="/project2" className="dropdown-item">Նախագիծ 2</a>
+              <a href="/project3" className="dropdown-item">Նախագիծ 3</a>
             </div>
-            <div className="info-item">
-              <FaPhone className="icon" />
-              <a href="tel:+0987654321" className="link">
-                +37477777
-              </a>
-            </div>
-            <div className="info-item">
-              <FaMapMarkerAlt className="icon" />
-              <a href="https://www.google.com/maps?q=40.222434,44.491180" target="_blank" className="link">Դավթաշեն</a>
-            </div>
-
-            {/* Social Networks text */}
-            
-
-            {/* Facebook և Instagram icon-ները */}
-            <div className="info-item social-icons">
-              <a href="https://www.facebook.com/StatusHouses" className="link" target="_blank" rel="noopener noreferrer">
-                <FaFacebook className="icon" />
-              </a>
-              <a href="https://www.instagram.com/canyon26832" className="link" target="_blank" rel="noopener noreferrer">
-                <FaInstagram className="icon" />
-              </a>
-            </div>
-          </div>
+          )}
         </div>
-      </header>
-
-      <NavBar />
-    </>
+        <a href="tel:098" className="nav-link">
+          <FaPhoneAlt className="icon-inline" /> Դիմել մեզ
+        </a>
+      </nav>
+    </div>
   );
 };
 
