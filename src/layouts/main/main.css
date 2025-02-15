@@ -62,14 +62,36 @@
 
 .scroll-down {
   position: fixed;
-  bottom: 30px; /* Մեծացվել է */
+  bottom: 30px;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 60px; /* Մեծացվել է */
+  font-size: 60px;
   color: #E39B62;
   cursor: pointer;
-  animation: bounce 1.5s infinite; /* Սլաքի շարժման անիմացիա */
-  border: 1px solid #fff; /* Սպիտակ բորդեր */
-  border-radius: 50%; /* Կլորացումը */
-  padding: 10px 15px; /* Պատվեր կլորելու համար */
+  animation: bounce 2s infinite; /* Անիմացիան */
+  border: 1px solid #fff;
+  border-radius: 50%;
+  padding: 10px 15px;
+  transition: all 0.3s ease; /* Տվյալ փոփոխությունները լինեն մեղմ */
+}
+
+/* Bounce անիմացիայի կանոնները */
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px); /* Խցանում է վեր */
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Hover էֆեկտը */
+.scroll-down:hover {
+  background-color: #E39B62; /* Գույնի փոփոխություն */
+  color: white; /* Տառերի գույնի փոփոխություն */
+  border-color: #E39B62; /* Սահմանման գույնի փոփոխություն */
+  transform: translateX(-50%) translateY(-5px); /* Կորցնում է bounce էֆեկտը եւ փոքրիկ վերև է բարձրանում */
 }
