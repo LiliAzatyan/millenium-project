@@ -8,11 +8,7 @@ const Header: React.FC = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      setIsScrolled(window.scrollY > 50);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -20,9 +16,10 @@ const Header: React.FC = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
   return (
     <div className={`nav-container ${isScrolled ? "scrolled" : ""}`}>
-      <div className="logo" id="specific-logo">MyLogo</div>
+      <div className="logo">MyLogo</div>
       <button
         className="menu-toggle"
         onClick={() => setIsOpen(!isOpen)}
@@ -38,10 +35,7 @@ const Header: React.FC = () => {
           className={`dropdown ${isOpen ? "open" : ""}`}
           onMouseLeave={() => setIsOpen(false)}
         >
-          <button
-            className="dropdown-btn"
-            onClick={() => setIsOpen(!isOpen)}
-          >
+          <button className="dropdown-btn" onClick={() => setIsOpen(!isOpen)}>
             Ավարտած նախագծեր
           </button>
           {isOpen && (

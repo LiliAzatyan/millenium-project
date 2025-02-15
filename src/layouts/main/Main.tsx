@@ -3,6 +3,7 @@ import "./main.css";
 import "../../App.css";
 import "./landing1.png";
 import "./landing2.png";
+import ScrollToNextSection from "./ScrollToNextSection";
 
 const images = [
   "./landing1.png",
@@ -43,6 +44,7 @@ const Main: React.FC = () => {
           <button onClick={handleNextImage}>Հաջորդ</button>
         </div>
       </div>
+      <ScrollToNextSection/>
     </div>
   );
 };

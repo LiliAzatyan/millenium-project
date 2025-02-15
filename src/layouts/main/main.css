@@ -59,3 +59,17 @@
 .image-controls button:hover {
   background-color: #E59460;
 }
+
+.scroll-down {
+  position: fixed;
+  bottom: 30px; /* Մեծացվել է */
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 60px; /* Մեծացվել է */
+  color: #E39B62;
+  cursor: pointer;
+  animation: bounce 1.5s infinite; /* Սլաքի շարժման անիմացիա */
+  border: 1px solid #fff; /* Սպիտակ բորդեր */
+  border-radius: 50%; /* Կլորացումը */
+  padding: 10px 15px; /* Պատվեր կլորելու համար */
+}

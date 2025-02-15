@@ -1,70 +1,130 @@
-/* Հիմնական ֆոն */
+/* Ընդհանուր կարգավորումներ */
 body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  background-image: url('/public/images/bg.jpeg'); /* Ֆոնային նկար */
+  background-image: url('/public/images/bg.jpeg');
   background-size: cover;
   background-position: center;
-  background-attachment: fixed; /* Անշարժ ֆոն */
-  color: #fff; /* Տեքստի գույն՝ հարմարեցված ֆոնին */
+  background-attachment: fixed;
+  color: #fff;
 }
 
-/* Header */
+/* Նավբար */
 .nav-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px;
+  padding: 12px 20px;
   position: sticky;
   top: 0;
   width: 100%;
   z-index: 1000;
-  background: none;
+  background: rgba(255, 255, 255, 0.2); /* Թափանցիկ */
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  font-size: 16px;
   transition: all 0.3s ease-in-out;
-  color: black;
 }
 
 .nav-container.scrolled {
-  background: #ffffff;
-}
-
-.nav-link {
-  color: black;
+  background: rgba(255, 255, 255, 0.9);
 }
 
 .logo {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: bold;
-  color: #ffffff;
+  color: #E39B62;
 }
 
+/* Նավբարի հղումներ */
 .nav-link {
-  padding: 12px 24px;
-  color: #ffffff;
+  padding: 8px 16px;
+  color: #E39B62;
   text-decoration: none;
+  font-weight: bold;
   transition: color 0.3s ease, background-color 0.3s ease;
 }
 
 .nav-link:hover {
-  color: #E39B62;
-  background-color: rgba(227, 155, 98, 0.1);
+  color: #fff; /* Փոխում ենք հովի ժամանակ գույնը */
+  background-color: rgba(227, 155, 98, 0.2); /* Թափանցիկ կիսափայլ ֆոն */
   border-radius: 4px;
 }
 
-.menu-toggle {
-  font-size: 30px;
-  color: #ffffff;
-  background: none;
+/* Dropdown button */
+.dropdown-btn {
+  background: rgba(227, 155, 98, 0.4);
+  color: #fff;
   border: none;
+  padding: 10px 18px;
+  font-weight: bold;
   cursor: pointer;
-  display: none; /* Hidden on desktop */
+  transition: all 0.3s ease;
+  border-radius: 6px;
 }
 
-/* Mobile-specific styles */
+.dropdown-btn:hover {
+  background-color: rgba(227, 155, 98, 0.7);
+  transform: scale(1.05);
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  padding: 8px 0;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.dropdown.open .dropdown-menu {
+  display: block;
+}
+
+/* Dropdown items */
+.dropdown-item {
+  color: #fff;
+  padding: 8px 18px;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  font-weight: normal;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-item:hover {
+  background-color: rgba(227, 155, 98, 0.3);
+}
+
+/* Կոճակներ */
+.button {
+  background-color: #E39B62;
+  color: white;
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.button:hover {
+  background-color: #C07B50;
+  transform: scale(1.05);
+}
+
+/* Մենյու բարը մոբայլում */
 @media (max-width: 1024px) {
   .menu-toggle {
     display: block;
+    font-size: 28px;
+    color: #E39B62;
+    background: none;
+    border: none;
+    cursor: pointer;
   }
 
   .nav {
@@ -73,7 +133,7 @@ body {
     position: absolute;
     top: 100%;
     right: 0;
-    background-color: rgba(0, 0, 0, 0.9); /* Մուգ ֆոն մոբայլում */
+    background-color: rgba(0, 0, 0, 0.9);
     width: 100%;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
@@ -84,5 +144,35 @@ body {
 
   .nav-link {
     text-align: center;
+  }
+
+  /* Այժմ միայն dropdown-ը կերևա մոբայլում */
+  .dropdown-btn {
+    display: block;
+  }
+  .dropdown-menu {
+    display: none; /* Սկզբում թաքնված է */
+  }
+  .dropdown.open .dropdown-menu {
+    display: block;
+  }
+
+  /* Հակառակի դեպքում, desktop-ում չպետք է dropdown մենյու երևա */
+  .dropdown {
+    display: none;
+  }
+}
+
+
+@media (max-width: 1024px) {
+  .menu-toggle {
+    display: block; /* Եղեք տեսանելի միայն մոբայլի դեպքում */
+  }
+}
+
+/* Desktop-ում թաքցնենք menu-toggle կոճակը */
+@media (min-width: 1025px) {
+  .menu-toggle {
+    display: none; /* Desktop-ում չերևա */
   }
 }
