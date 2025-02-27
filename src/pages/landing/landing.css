@@ -1,0 +1,10 @@
+.landing-container {
+  background-image: url('/public/images/bg.jpeg');
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  margin-top: -100px;
+  height: 1180px;
+}

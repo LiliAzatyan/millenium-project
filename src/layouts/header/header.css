@@ -1,12 +1,13 @@
-/* Ընդհանուր կարգավորումներ */
 body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  background-image: url('/public/images/bg.jpeg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  background: rgba(255, 255, 255, 0.1); /* Ավելի թափանցիկ */
+  background: transparent;
+
   color: #fff;
 }
 
@@ -25,10 +26,12 @@ body {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   font-size: 16px;
   transition: all 0.3s ease-in-out;
+    background: rgba(255, 255, 255, 0.05); /* Գրեթե անտեսանելի */
+    backdrop-filter: blur(10px); /* Պահպանում է մառախլապատ էֆեկտը */
 }
 
 .nav-container.scrolled {
-  background: rgba(255, 255, 255, 0.9);
+  background: #2E2E2E;
 }
 
 .logo {
@@ -54,8 +57,8 @@ body {
 
 /* Dropdown button */
 .dropdown-btn {
-  background: rgba(227, 155, 98, 0.4);
-  color: #fff;
+  background: #D1BFA3;
+  color: #FFFFFF;
   border: none;
   padding: 10px 18px;
   font-weight: bold;
@@ -65,7 +68,7 @@ body {
 }
 
 .dropdown-btn:hover {
-  background-color: rgba(227, 155, 98, 0.7);
+  background-color: #E3A008;
   transform: scale(1.05);
 }
 

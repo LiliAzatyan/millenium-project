@@ -1,5 +1,6 @@
 import { FaBars, FaPhoneAlt, FaTimes } from "react-icons/fa";
 import React, { useState, useEffect } from "react";
+import { ROUTES } from "../../constant/paths";
 import "./header.css";
 
 const Header: React.FC = () => {
@@ -19,7 +20,9 @@ const Header: React.FC = () => {
 
   return (
     <div className={`nav-container ${isScrolled ? "scrolled" : ""}`}>
+      <a href={ROUTES.LANDING} style={{textDecoration: "none"}}>
       <div className="logo">MyLogo</div>
+      </a>
       <button
         className="menu-toggle"
         onClick={() => setIsOpen(!isOpen)}
@@ -28,9 +31,9 @@ const Header: React.FC = () => {
         {isOpen ? <FaTimes className="menu-icon" /> : <FaBars className="menu-icon" />}
       </button>
       <nav className={`nav ${isOpen ? "nav-open" : ""}`}>
-        <a href="#home" className="nav-link">Մեր մասին</a>
-        <a href="#features" className="nav-link">Ծառայություններ</a>
-        <a href="#contact" className="nav-link">Շինարարական գործընթաց</a>
+        <a href={ROUTES.ABOUT} className="nav-link">Մեր մասին</a>
+        <a href={ROUTES.SERVICES} className="nav-link">Ծառայություններ</a>
+        <a href={ROUTES.PROCESS} className="nav-link">Շինարարական գործընթաց</a>
         <div
           className={`dropdown ${isOpen ? "open" : ""}`}
           onMouseLeave={() => setIsOpen(false)}
@@ -49,6 +52,7 @@ const Header: React.FC = () => {
         <a href="tel:098" className="nav-link">
           <FaPhoneAlt className="icon-inline" /> Դիմել մեզ
         </a>
+        <a href={ROUTES.CONTACT} className="nav-link">Կապ մեզ հետ</a>
       </nav>
     </div>
   );

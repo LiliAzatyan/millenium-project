@@ -1,63 +1,11 @@
 .landing-container {
   display: flex;
-  flex-direction: column; /* Հարմարվող դասավորություն */
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  min-height: calc(100vh - 80px); /* Հաշվի առնելով header-ի բարձրությունը */
+  min-height: calc(100vh - 80px); 
   padding: 40px;
-}
-
-.landing-text {
-  color: #ffffff;
-  margin-bottom: 20px;
-}
-
-.landing-text h1 {
-  font-size: 3.5rem;
-  font-weight: 700;
-  color: #FFB373;
-  margin-bottom: 20px;
-}
-
-.landing-text p {
-  font-size: 1.5rem;
-  color: #ffffff;
-  line-height: 1.8;
-}
-
-.landing-image-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.landing-image {
-  width: 90%;
-  max-width: 600px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  margin-bottom: 20px;
-}
-
-.image-controls {
-  display: flex;
-  gap: 10px;
-}
-
-.image-controls button {
-  padding: 10px 15px;
-  font-size: 16px;
-  background-color: #FFB373;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.image-controls button:hover {
-  background-color: #E59460;
 }
 
 .scroll-down {
@@ -68,27 +16,25 @@
   font-size: 60px;
   color: #E39B62;
   cursor: pointer;
-  animation: bounce 2s infinite; /* Անիմացիան */
+  animation: bounce 2s infinite; 
   border: 1px solid #fff;
   border-radius: 50%;
   padding: 10px 15px;
-  transition: all 0.3s ease; /* Տվյալ փոփոխությունները լինեն մեղմ */
+  transition: all 0.3s ease; 
 }
 
-/* Bounce անիմացիայի կանոնները */
 @keyframes bounce {
   0% {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-10px); /* Խցանում է վեր */
+    transform: translateY(-10px); 
   }
   100% {
     transform: translateY(0);
   }
 }
 
-/* Hover էֆեկտը */
 .scroll-down:hover {
   background-color: #E39B62; /* Գույնի փոփոխություն */
   color: white; /* Տառերի գույնի փոփոխություն */
