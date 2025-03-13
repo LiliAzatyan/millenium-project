@@ -1,0 +1,108 @@
+.contact-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 60px 20px;
+    text-align: center;
+    font-family: "Arial", sans-serif;
+    color: #333;
+  }
+  
+  .contact-header h1 {
+    font-size: 40px;
+    font-weight: bold;
+    color: #E39B62;
+    margin-bottom: 10px;
+  }
+  
+  .contact-header p {
+    font-size: 20px;
+    margin-bottom: 40px;
+    color: #666;
+  }
+  
+  .contact-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+  }
+  
+  /* Contact Info Cards */
+  .contact-info {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .contact-card {
+    background: linear-gradient(135deg, #fff, #f9f3ee);
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    width: 280px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  .contact-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .contact-card h3 {
+    font-size: 20px;
+    color: #E39B62;
+    margin: 15px 0;
+  }
+  
+  .contact-card p {
+    font-size: 18px;
+    color: #444;
+  }
+  
+  .contact-card a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .contact-card a:hover {
+    color: #E39B62;
+  }
+  
+  /* Icons */
+  .contact-icon {
+    font-size: 40px;
+    color: #E39B62;
+  }
+  
+  /* Map */
+  .map-container {
+    width: 80%;
+    max-width: 800px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Social Media */
+  .social-media {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .social-icon {
+    font-size: 40px;
+    color: #E39B62;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+  
+  .social-icon:hover {
+    transform: scale(1.2);
+    color: #C07B50;
+  }
+  
