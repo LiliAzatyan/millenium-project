@@ -8,8 +8,8 @@ import Projects from './pages/projects/Projects';
 import Services from './pages/services/Services';
 import { ROUTES } from './constant/paths';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Process from './pages/process/Process';
 import Footer from './layouts/footer/Footer';
+import "./App.css";
 
 const App: React.FC = () => {
   return (
@@ -21,7 +21,6 @@ const App: React.FC = () => {
         <Route path={ROUTES.CONTACT} element={<Contact/>} />
         <Route path={ROUTES.PROJECTS} element={<Projects />} />
         <Route path={ROUTES.SERVICES} element={<Services />} />
-        <Route path={ROUTES.PROCESS} element={<Process />} />
       </Routes>
       <Footer/>
     </Router>

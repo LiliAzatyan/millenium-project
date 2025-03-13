@@ -1,17 +1,3 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  background: rgba(255, 255, 255, 0.1); /* Ավելի թափանցիկ */
-  background: transparent;
-
-  color: #fff;
-}
-
-/* Նավբար */
 .nav-container {
   display: flex;
   justify-content: space-between;
@@ -21,26 +7,22 @@ body {
   top: 0;
   width: 100%;
   z-index: 1000;
-  background: rgba(255, 255, 255, 0.2); /* Թափանցիկ */
-  backdrop-filter: blur(10px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   font-size: 16px;
   transition: all 0.3s ease-in-out;
-    background: rgba(255, 255, 255, 0.05); /* Գրեթե անտեսանելի */
-    backdrop-filter: blur(10px); /* Պահպանում է մառախլապատ էֆեկտը */
+  background-color: white
+
 }
 
 .nav-container.scrolled {
-  background: #2E2E2E;
+  /* background: #2E2E2E; */
 }
 
 .logo {
-  font-size: 20px;
+  font-size: 30px;
   font-weight: bold;
   color: #E39B62;
 }
 
-/* Նավբարի հղումներ */
 .nav-link {
   padding: 8px 16px;
   color: #E39B62;
@@ -49,15 +31,21 @@ body {
   transition: color 0.3s ease, background-color 0.3s ease;
 }
 
-.nav-link:hover {
-  color: #fff; /* Փոխում ենք հովի ժամանակ գույնը */
-  background-color: rgba(227, 155, 98, 0.2); /* Թափանցիկ կիսափայլ ֆոն */
-  border-radius: 4px;
+.nav-link {
+  display: inline-block;
+  transition: transform 0.2s ease-in-out, letter-spacing 0.2s ease-in-out;
 }
 
-/* Dropdown button */
+.nav-link:hover {
+  border-radius: 4px;
+  transform: scale(1.1);
+  letter-spacing: 1px;
+  color: #2E2E2E;
+}
+
+
 .dropdown-btn {
-  background: #D1BFA3;
+  background: #E39B62;
   color: #FFFFFF;
   border: none;
   padding: 10px 18px;
@@ -68,11 +56,9 @@ body {
 }
 
 .dropdown-btn:hover {
-  background-color: #E3A008;
   transform: scale(1.05);
 }
 
-/* Dropdown menu */
 .dropdown-menu {
   display: none;
   position: absolute;
@@ -87,7 +73,6 @@ body {
   display: block;
 }
 
-/* Dropdown items */
 .dropdown-item {
   color: #fff;
   padding: 8px 18px;
@@ -102,7 +87,6 @@ body {
   background-color: rgba(227, 155, 98, 0.3);
 }
 
-/* Կոճակներ */
 .button {
   background-color: #E39B62;
   color: white;
@@ -119,7 +103,6 @@ body {
   transform: scale(1.05);
 }
 
-/* Մենյու բարը մոբայլում */
 @media (max-width: 1024px) {
   .menu-toggle {
     display: block;
@@ -149,33 +132,29 @@ body {
     text-align: center;
   }
 
-  /* Այժմ միայն dropdown-ը կերևա մոբայլում */
   .dropdown-btn {
     display: block;
   }
   .dropdown-menu {
-    display: none; /* Սկզբում թաքնված է */
+    display: none; 
   }
   .dropdown.open .dropdown-menu {
     display: block;
   }
 
-  /* Հակառակի դեպքում, desktop-ում չպետք է dropdown մենյու երևա */
   .dropdown {
     display: none;
   }
 }
 
-
 @media (max-width: 1024px) {
   .menu-toggle {
-    display: block; /* Եղեք տեսանելի միայն մոբայլի դեպքում */
+    display: block; 
   }
 }
 
-/* Desktop-ում թաքցնենք menu-toggle կոճակը */
 @media (min-width: 1025px) {
   .menu-toggle {
-    display: none; /* Desktop-ում չերևա */
+    display: none; 
   }
 }
