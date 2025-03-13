@@ -71,10 +71,9 @@
 
 .image-container {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 50px;
   width: 1000px;
-  height: 1010px;
+  height: 1040px;
   overflow: hidden;
   z-index: 1;
   margin-left: 680px;
@@ -91,27 +90,24 @@
 
 .scroll-down-arrow {
   position: absolute;
-  margin-top: 580px;
-  margin-left: 20%; /* Կենտրոնացում */
+  bottom: 240px; 
+  left: 20%;
   transform: translateX(-50%);
-  font-size: 40px; /* Փոքր սլաք */
+  font-size: 40px; 
   color: #E39B62;
   cursor: pointer;
   animation: bounce 1s infinite;
-  z-index: 2; 
-  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Սև շադո */
-  padding: 8px 15px; /* ՓոքրPadding */
+  z-index: 100; 
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); 
+  padding: 10px 18px; 
   border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.7);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
 }
 
 .scroll-down-arrow:hover {
-  background-color: rgba(0, 0, 0, 0.3); /* Հավաքվում է ֆոնի գույնը սլաքի վրա սեղմելիս */
+  background-color: rgba(255, 255, 255, 0.9);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
-}
-
-.scroll-down-arrow.hidden {
-  opacity: 0; /* Հաղորդագրություն թաքցնելու դեպքում */
 }
 
 @keyframes fadeIn {

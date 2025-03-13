@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import "./main.css";
 
 const pictures = [
-  require("./main-pictures/1.jpg"),
   require("./main-pictures/2.jpg"),
   require("./main-pictures/3.jpg"),
   require("./main-pictures/4.jpg"),
@@ -41,7 +40,7 @@ const Main: React.FC = () => {
 
         <div className="button-container">
           <a href="/services" className="button">Ծառայություններ</a>
-          <a href="tel:+37412345678" className="button">Զանգեք մեզ</a>
+          <a href="tel:+37412345678" className="button">Դիմել մեզ</a>
         </div>
       </div>
       <div className="image-container">

@@ -1,4 +1,172 @@
-.footer-content {
-    background-color: #2E2E2E;
-    height: 500px;
+/* Ֆուտերի հիմնական կոնտեյներ */
+.footer-container {
+    position: relative;
+    width: 100%;
+    background-color: #333; /* փոխարինված մի քանի գույններով */
+    color: white;
+    padding: 40px 20px;
+    box-sizing: border-box;
+    margin-top: 300px;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  
+  .footer-logo,
+  .footer-menu,
+  .footer-contact,
+  .footer-socials {
+    margin-bottom: 20px;
+    width: 25%;
+  }
+  
+  .footer-logo h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #e39b62; /* ավելի տաք գույն */
+  }
+  
+  .footer-logo p {
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  
+  .footer-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .footer-menu h3 {
+    font-size: 18px;
+    color: #e39b62;
+  }
+  
+  .footer-menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-menu a:hover {
+    color: #e39b62;
+  }
+  
+  .footer-contact p {
+    font-size: 16px;
+  }
+  
+  .footer-socials {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .footer-socials h3 {
+    font-size: 18px;
+    color: #e39b62;
+  }
+  
+  .footer-socials a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-socials a:hover {
+    color: #e39b62;
+  }
+  
+  /* Ֆուտերի ներքևի հատված */
+  .footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    border-top: 1px solid #555;
+    padding-top: 10px;
+  }
+  
+  /* Մոբայլից դուրս՝ մեծ էկրանների համար */
+  @media screen and (min-width: 768px) {
+    .footer-content {
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  
+    .footer-logo,
+    .footer-menu,
+    .footer-contact,
+    .footer-socials {
+      width: 23%;
+    }
+  }
+  
+  /* Պարզ կերպով մոբայլի չափերի համար */
+  @media screen and (max-width: 767px) {
+    .footer-content {
+      display: block;
+      text-align: center;
+    }
+  
+    .footer-logo,
+    .footer-menu,
+    .footer-contact,
+    .footer-socials {
+      width: 100%;
+      margin-top: 20px;
+    }
+  
+    .footer-menu a,
+    .footer-socials a {
+      display: block;
+      margin-bottom: 10px;
+    }
+  }
+  
+  /* Հեռախոսահամար ու էլ․ փոստի նոր գույներ */
+.footer-contact a,
+.footer-contact p {
+  color: white;
+  text-decoration: none; /* Չի լինի տակի գիծ */
+}
+
+.footer-contact a:hover {
+  color: #e39b62; /* Գույնը փոխվում է հովերի ժամանակ */
+}
+
+/* Կոնտեյներների հիմնական հատվածները նույն գույնով */
+.footer-menu h3,
+.footer-contact h3,
+.footer-socials h3 {
+  font-size: 18px;
+  color: #e39b62; /* Համապատասխան գույն */
+}
+
+/* Հովեր՝ սպիտակ գույնով */
+.footer-menu a:hover,
+.footer-socials a:hover,
+.footer-contact a:hover {
+  color: #fff; /* Սպիտակ հովեր */
+}
+
+/* Տեքստերի հովեր */
+.footer-menu a,
+.footer-socials a,
+.footer-contact a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.footer-menu a:hover,
+.footer-socials a:hover,
+.footer-contact a:hover {
+  color: #e39b62;
 }

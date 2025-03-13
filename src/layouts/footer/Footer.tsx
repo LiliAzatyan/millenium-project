@@ -1,12 +1,51 @@
-import React from 'react'
+import React from "react";
 import "./footer.css";
 
 const Footer = () => {
   return (
-    <div className='footer-content'>
-      
-    </div>
-  )
-}
+    <footer className="footer-container">
+      <div className="footer-content">
+        <div className="footer-logo">
+          <h2>Company Name</h2>
+          <p>Մենք կառուցում ենք ապագան 🏡</p>
+        </div>
 
-export default Footer
+        <div className="footer-menu">
+          <h3>Գլխավոր</h3>
+          <a href="/">Գլխավոր</a>
+          <a href="/about">Մեր Մասին</a>
+          <a href="/services">Ծառայություններ</a>
+          <a href="/contact">Կապ</a>
+        </div>
+
+        <div className="footer-contact">
+          <h3>Կապ մեզ հետ</h3>
+          <p>📍 Հասցե: Երևան, Աբովյան 1</p>
+          <p>📞 Հեռ․: <a href="tel:+37412345678">+374 12 34 56 78</a></p>
+          <p>✉️ Էլ․ փոստ: <a href="mailto:info@example.com">info@example.com</a></p>
+        </div>
+
+        <div className="footer-socials">
+          <h3>Սոցիալական հարթակներ</h3>
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+            🌐 Facebook
+          </a>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+            📸 Instagram
+          </a>
+          <a href="https://wa.me" target="_blank" rel="noopener noreferrer">
+            💬 WhatsApp
+          </a>
+          <a href="https://t.me" target="_blank" rel="noopener noreferrer">
+            📱 Telegram
+          </a>
+        </div>
+      </div>
+      <div className="footer-bottom">
+        <p>© {new Date().getFullYear()} Միլլենիում Գրուպ | Բոլոր իրավունքները պաշտպանված են</p>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;

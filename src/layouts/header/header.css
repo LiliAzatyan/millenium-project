@@ -3,14 +3,13 @@
   justify-content: space-between;
   align-items: center;
   padding: 12px 20px;
-  position: sticky;
+  position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
   font-size: 16px;
   transition: all 0.3s ease-in-out;
-  background-color: white
-
+  background-color: white;
 }
 
 .nav-container.scrolled {
@@ -119,7 +118,6 @@
     position: absolute;
     top: 100%;
     right: 0;
-    background-color: rgba(0, 0, 0, 0.9);
     width: 100%;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
