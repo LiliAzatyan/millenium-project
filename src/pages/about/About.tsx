@@ -1,5 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
+import "./about.css";
+const videoSrc = require("./video.mp4"); // Իմպորտ վիդեո ֆայլը
 
 const About: React.FC = () => {
   return (
@@ -9,6 +11,20 @@ const About: React.FC = () => {
       transition={{ duration: 1 }}
       className="about-container bg-gradient-to-r from-[#1a1a1a] via-[#2e2e2e] to-[#1a1a1a] text-white py-16 px-8 min-h-screen flex flex-col items-center"
     >
+      {/* Video section */}
+      <div className="w-full mb-12">
+        <video
+          className="w-full video-height"
+          autoPlay
+          loop
+          muted
+          playsInline
+        >
+          <source src={videoSrc} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
       <div className="max-w-4xl text-center">
         <h1 className="text-5xl font-bold text-[#E39B62] mb-6">Մեր Մասին</h1>
         <p className="text-lg text-gray-300 leading-relaxed mb-6">

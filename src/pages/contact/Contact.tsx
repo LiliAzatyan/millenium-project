@@ -7,7 +7,6 @@ const Contact = () => {
   return (
     <div className="contact-container">
       <div style={{ display: "flex", alignItems: "center" }}>
-        {/* Փոփափի կոնտեյներ */}
         <div className="contact-content">
           <h1>Հետադարձ Կապ</h1>
           <p>Խնդրում ենք կապ հաստատել մեզ հետ նշված եղանակներով:</p>
@@ -45,23 +44,20 @@ const Contact = () => {
             </div>
           </div>
         </div>
-
-        {/* Նկար */}
-        <div className="contact-image">
-          <img src={ContactPicture} alt="Contact" />
-        </div>
       </div>
 
-      {/* Քարտեզ */}
       <div className="map-container">
-        <iframe
-          title="Google Maps"
-          width="100%"
-          height="400"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3140.1461985484427!2d44.51840031559388!3d40.18026697938747!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x404abb2dfb7c51e9%3A0x40a3fc1b1a7e0184!2z0JrQsNC60LDRg9C60YbQsNCw0Y8!5e0!3m2!1sen!2sus!4v1651060796062!5m2!1sen!2sus"
-          style={{ border: 0 }}
-          loading="lazy"
-        ></iframe>
+      <div className="map-container">
+      <iframe
+        title="Google Maps"
+        width="100%"
+        height="400"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3140.1461985484427!2d44.491145!3d40.222437!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x404abb2dfb7c51e9%3A0x40a3fc1b1a7e0184!2z6FCR+XCV, Pirumianner St, Yerevan 0054!5e0!3m2!1sen!2sus!4v1651060796062!5m2!1sen!2sus"
+        style={{ border: 0 }}
+        loading="lazy"
+      ></iframe>
+    </div>
+
       </div>
     </div>
   );

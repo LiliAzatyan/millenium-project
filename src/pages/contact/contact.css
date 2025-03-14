@@ -1,161 +1,151 @@
-/* Ամեն ինչ կոդի կարգավորումը */
 .contact-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 40px;
-    margin-top: 8%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  margin-top: 8%;
+}
+
+.contact-content {
+  background: #fff;
+  padding: 40px 30px;
+  width: 80%;
+  max-width: 600px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  opacity: 0;
+  animation: fadeIn 1.2s forwards;
+  animation-delay: 0.3s;
+  margin-right: 30px;
+}
+
+.contact-image {
+  width: 250px;
+  height: 250px;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 20px;
+  opacity: 0;
+  animation: fadeInImage 1.5s forwards;
+  animation-delay: 0.5s;
+}
+
+.contact-content h1 {
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.contact-content p {
+  text-align: center;
+  font-size: 18px;
+  color: #777;
+  margin-bottom: 30px;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 16px;
+  color: #333;
+}
+
+.contact-item span {
+  font-size: 24px;
+}
+
+.contact-item a {
+  color: #e39b62;
+  text-decoration: none;
+}
+
+.contact-item a:hover {
+  color: #c07b50;
+  transition: color 0.3s ease;
+}
+
+.work-hours {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.work-hours li {
+  font-size: 16px;
+  color: #555;
+}
+
+/* Սոցիալական հղումները */
+.social-media {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.social-media h3 {
+  font-size: 24px;
+  color: #444;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.social-links a {
+  font-size: 18px;
+  color: #0077b5;
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  color: #005f8d;
+  transition: color 0.3s ease;
+}
+/* Քարտեզի տեղադրումը */
+.map-container {
+  margin-top: 40px;
+  width: 100%;
+}
+
+/* Անիմացիան */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
   }
-  
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInImage {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media screen and (max-width: 768px) {
   .contact-content {
-    background: #fff;
-    padding: 40px 30px;
-    width: 80%;
-    max-width: 600px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    border-radius: 12px;
-    opacity: 0;
-    animation: fadeIn 1.2s forwards;
-    animation-delay: 0.3s;
-    margin-right: 30px;
+    width: 90%;
   }
-  
   .contact-image {
-    width: 250px;
-    height: 250px;
-    border-radius: 8px;
-    overflow: hidden;
-    margin-top: 20px;
-    opacity: 0;
-    animation: fadeInImage 1.5s forwards;
-    animation-delay: 0.5s;
+    width: 150px;
+    height: 150px;
   }
-  
-  .contact-content h1 {
-    text-align: center;
-    font-size: 32px;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 20px;
-  }
-  
-  .contact-content p {
-    text-align: center;
-    font-size: 18px;
-    color: #777;
-    margin-bottom: 30px;
-  }
-  
-  .contact-info {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  
-  .contact-item {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    font-size: 16px;
-    color: #333;
-  }
-  
-  .contact-item span {
-    font-size: 24px;
-  }
-  
-  .contact-item a {
-    color: #e39b62;
-    text-decoration: none;
-  }
-  
-  .contact-item a:hover {
-    color: #c07b50;
-    transition: color 0.3s ease;
-  }
-  
-  .work-hours {
-    list-style-type: none;
-    padding-left: 0;
-  }
-  
-  .work-hours li {
-    font-size: 16px;
-    color: #555;
-  }
-  
-  /* Սոցիալական հղումները */
-  .social-media {
-    margin-top: 40px;
-    text-align: center;
-  }
-  
-  .social-media h3 {
-    font-size: 24px;
-    color: #444;
-  }
-  
-  .social-links {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 10px;
-  }
-  
-  .social-links a {
-    font-size: 18px;
-    color: #0077b5;
-    text-decoration: none;
-  }
-  
-  .social-links a:hover {
-    color: #005f8d;
-    transition: color 0.3s ease;
-  }
-  
-  /* Նկարի տեղադրումը */
-  .contact-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  /* Քարտեզի տեղադրումը */
-  .map-container {
-    margin-top: 40px;
-    width: 100%;
-  }
-  
-  /* Անիմացիան */
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
-      transform: translateY(50px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  @keyframes fadeInImage {
-    0% {
-      opacity: 0;
-      transform: translateX(50px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-  
-  @media screen and (max-width: 768px) {
-    .contact-content {
-      width: 90%;
-    }
-    .contact-image {
-      width: 150px;
-      height: 150px;
-    }
-  }
-  
+}

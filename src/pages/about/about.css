@@ -1,0 +1,6 @@
+.video-height {
+    height: 60vh; /* Set the height to 50% of the viewport height */
+    width: 100%;
+    object-fit: cover; /* Ensure the video covers the space without stretching */
+  }
+  
