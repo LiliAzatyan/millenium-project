@@ -1,6 +1,81 @@
-.video-height {
-    height: 60vh; /* Set the height to 50% of the viewport height */
+.about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  /* Video Section */
+  .video-section {
     width: 100%;
-    object-fit: cover; /* Ensure the video covers the space without stretching */
+    margin-bottom: 60px;
+  }
+  
+  .video-height {
+    height: 60vh;
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  /* Content Section */
+  .content-section {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    padding: 0 20px;
+  }
+  
+  /* General Section Styling */
+  .section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+  }
+  
+  .text-container {
+    flex: 1;
+    text-align: left;
+  }
+  
+  .section-title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 16px;
+  }
+  
+  .section-text {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+  
+  /* Reverse Section */
+  .reverse {
+    flex-direction: row-reverse;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .section {
+      flex-direction: column;
+      text-align: center;
+      gap: 20px;
+    }
+  
+    .reverse {
+      flex-direction: column;
+    }
+  
+    .image-container img {
+      height: auto;
+      max-height: 400px;
+      width: 100%;
+    }
+  
+    .text-container {
+      text-align: center;
+    }
   }
   

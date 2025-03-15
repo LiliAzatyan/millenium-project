@@ -12,9 +12,13 @@
   background-color: white;
 }
 
-.nav-container.scrolled {
-  /* background: #2E2E2E; */
-}
+/* .nav-container.scrolled {
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px); 
+  border: 1px solid rgba(255, 255, 255, 0.2); 
+} */
+
+
 
 .logo {
   font-size: 30px;
@@ -66,13 +70,16 @@
   border-radius: 8px;
   padding: 8px 0;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  
 }
 
 .dropdown.open .dropdown-menu {
   display: block;
-  background-color: rgba(150, 150, 150, 0.2); /* Ավելի բաց ու թափանցիկ մոխրագույն */
-  backdrop-filter: blur(8px); /* Թեթև աղոտ էֆեկտ */
-  border: 1px solid rgba(255, 255, 255, 0.2); /* Թափանցիկ սպիտակ եզր */
+  backdrop-filter: blur(18px); /* Թեթև աղոտ էֆեկտ */
+  border: 1px solid rgba(255, 255, 255, 0.2); 
+  background: #928f8f;
+  backdrop-filter: blur(10px); 
+  border: 1px solid rgba(255, 255, 255, 0.2); 
 }
 
 .dropdown-item {

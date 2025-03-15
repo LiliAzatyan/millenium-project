@@ -28,7 +28,7 @@ const Contact = () => {
               </div>
               <div className="contact-item">
                 <span role="img" aria-label="location">📍</span>
-                <p>Հասցե: Երևան, Արմենիա</p>
+                <p>Հասցե: Երևան, Դավթաշեն համայնք</p>
               </div>
               <div className="contact-item">
                 <span role="img" aria-label="schedule">🕒</span>

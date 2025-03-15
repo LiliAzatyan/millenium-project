@@ -33,11 +33,11 @@ const Header: React.FC = () => {
       <nav className={`nav ${isOpen ? "nav-open" : ""}`}>
         <a href={ROUTES.ABOUT} className="nav-link">Մեր մասին</a>
         <a href={ROUTES.SERVICES} className="nav-link">Ծառայություններ</a>
+        <a href={ROUTES.CONTACT} className="nav-link">Կապ մեզ հետ</a>
         <div
           className={`dropdown ${isOpen ? "open" : ""}`}
           onMouseLeave={() => setIsOpen(false)}
         >
-          <a href={ROUTES.CONTACT} className="nav-link">Կապ մեզ հետ</a>
           <button className="dropdown-btn" onClick={() => setIsOpen(!isOpen)}>
             Ավարտած նախագծեր
           </button>
