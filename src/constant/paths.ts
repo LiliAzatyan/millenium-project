@@ -1,9 +1,10 @@
 export const ROUTES = {
-    LANDING: '/',
+    LANDING: "/",
     ABOUT: "/about",
-    PROJECTS: "/projects",
     CONTACT: "/contact",
     SERVICES: "/services",
-    PROCESS: "/process",
-};
+    PROJECT_1: "/project1",
+    PROJECT_2: "/project2",
+    PROJECT_3: "/project3",
+  };
   
