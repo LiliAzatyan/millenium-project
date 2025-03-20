@@ -1,9 +1,24 @@
 import React from "react";
-import ProductCard from "../projects-card/ProjectsCard";
-import "./product-section.css";
+import "./ProjectsSection.css";
 
-const ProjectSection: React.FC = () => {
-  const products = [
+interface ProductCardProps {
+  title: string;
+  description: string;
+  imageUrl: string;
+}
+
+const ProjectsCard: React.FC<ProductCardProps> = ({ title, description, imageUrl }) => {
+  return (
+    <div className="product-card">
+      <h3>{title}</h3>
+      <img src={imageUrl} alt={title} />
+      <p>{description}</p>
+    </div>
+  );
+};
+
+const ProjectsSection: React.FC = () => {
+  const projects = [
     {
       title: "Բնակելի Շենք 1",
       description: "Շինարարական ամենաբարձր որակով իրականացված բնակելի շենք:",
@@ -25,23 +40,14 @@ const ProjectSection: React.FC = () => {
       imageUrl: "../images/shenq.jpg",
     },
   ];
-  
 
   return (
     <div className="general-content">
       <div className="product-section-wrapper">
         <div className="product-section">
-          {products.map((product, index) => (
-            <ProductCard
+          {projects.map((product, index) => (
+            <ProjectsCard
               key={index}
-              title={product.title}
-              description={product.description}
-              imageUrl={product.imageUrl}
-            />
-          ))}
-          {products.map((product, index) => (
-            <ProductCard
-              key={products.length + index}
               title={product.title}
               description={product.description}
               imageUrl={product.imageUrl}
@@ -53,4 +59,4 @@ const ProjectSection: React.FC = () => {
   );
 };
 
-export default ProjectSection;
+export default ProjectsSection;

@@ -1,13 +1,13 @@
 import React from "react";
 import Main from "../../layouts/main/Main";
-import ProductSection from "../../components/project-section/projects-section/ProjectsSection";
 import "./landing.css";
+import ProjectSection from "../../components/project-section/ProjectsSection";
 
 const Landing: React.FC = () => {
   return (
     <div className="landing-container">
       <Main/>
-      <ProductSection/>
+      <ProjectSection/>
     </div>
   )
 }
