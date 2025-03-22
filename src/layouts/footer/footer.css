@@ -2,7 +2,7 @@
 .footer-container {
     position: relative;
     width: 100%;
-    background-color: #333; /* փոխարինված մի քանի գույններով */
+    background-color: var(--dark-top-bg);
     color: white;
     padding: 40px 20px;
     box-sizing: border-box;
@@ -27,7 +27,7 @@
   .footer-logo h2 {
     font-size: 24px;
     font-weight: bold;
-    color: #e39b62; /* ավելի տաք գույն */
+    color: var(--main-color); 
   }
   
   .footer-logo p {
@@ -43,7 +43,7 @@
   
   .footer-menu h3 {
     font-size: 18px;
-    color: #e39b62;
+    color: var(--main-color);
   }
   
   .footer-menu a {
@@ -54,7 +54,7 @@
   }
   
   .footer-menu a:hover {
-    color: #e39b62;
+    color: var(--main-color);
   }
   
   .footer-contact p {
@@ -69,7 +69,7 @@
   
   .footer-socials h3 {
     font-size: 18px;
-    color: #e39b62;
+    color: var(--main-color);
   }
   
   .footer-socials a {
@@ -80,7 +80,7 @@
   }
   
   .footer-socials a:hover {
-    color: #e39b62;
+    color: var(--main-color);
   }
   
   /* Ֆուտերի ներքևի հատված */
@@ -137,7 +137,7 @@
 }
 
 .footer-contact a:hover {
-  color: #e39b62; /* Գույնը փոխվում է հովերի ժամանակ */
+  color: var(--main-color); /* Գույնը փոխվում է հովերի ժամանակ */
 }
 
 /* Կոնտեյներների հիմնական հատվածները նույն գույնով */
@@ -145,7 +145,7 @@
 .footer-contact h3,
 .footer-socials h3 {
   font-size: 18px;
-  color: #e39b62; /* Համապատասխան գույն */
+  color: var(--main-color); /* Համապատասխան գույն */
 }
 
 /* Հովեր՝ սպիտակ գույնով */
@@ -168,5 +168,5 @@
 .footer-menu a:hover,
 .footer-socials a:hover,
 .footer-contact a:hover {
-  color: #e39b62;
+  color: var(--main-color);
 }

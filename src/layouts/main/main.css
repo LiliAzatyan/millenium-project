@@ -38,8 +38,8 @@
 }
 
 .button {
-  background-color: #E39B62;
-  color: white;
+  background-color: #EBC886;
+  color: #282A2E;
   border-radius: 30px;
   padding: 15px 35px;
   font-weight: bold;
@@ -55,7 +55,7 @@
 }
 
 .button:hover {
-  background-color: #C07B50;
+  background-color: #D4A75D;
   transform: translateY(-5px);
   box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.15);
 }
@@ -71,12 +71,12 @@
 
 .image-container {
   position: absolute;
-  top: 50px;
+  margin-top: 140px;
   width: 1000px;
-  height: 1040px;
+  height: 800px;
   overflow: hidden;
   z-index: 1;
-  margin-left: 680px;
+  margin-left: 640px;
 }
 
 .fade-image {
@@ -94,7 +94,7 @@
   left: 20%;
   transform: translateX(-50%);
   font-size: 40px; 
-  color: #E39B62;
+  color: var(--main-color);
   cursor: pointer;
   animation: bounce 1s infinite;
   z-index: 100; 
@@ -102,7 +102,8 @@
   padding: 10px 18px; 
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.7);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  margin-top: 40%;
 }
 
 .scroll-down-arrow:hover {

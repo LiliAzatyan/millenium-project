@@ -4,3 +4,8 @@ html, body {
     /* height: 100%; */
     overflow-x: hidden; 
   }
+:root {
+  --dark-transparent: rgba(40, 42, 46, 0.9);
+  --dark-top-bg: #282A2E;
+  --main-color: #EBC886;
+}

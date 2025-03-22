@@ -1,4 +1,4 @@
-.project-container {
+/* .project-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -21,4 +21,122 @@
     flex: 1;
     text-align: left;
   }
-  
+   */
+
+   
+
+   .project-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+}
+
+.project-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+    max-width: 1200px;
+}
+
+.image-section {
+    flex: 1;
+}
+
+.text-section {
+    flex: 1;
+    text-align: left;
+}
+
+.cta-contact-section {
+    background-color: #f0f0f0;
+    padding: 40px;
+    margin-top: 50px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.cta-contact-section h2 {
+    font-size: 24px;
+    color: #333;
+}
+
+.cta-contact-section p {
+    font-size: 16px;
+    color: #777;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    background-color: #E39B62;
+    color: white;
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #d1824e;
+}
+
+.contact-section {
+    margin-top: 60px;
+    padding: 40px 20px;
+    background-color: #f1f1f1;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.contact-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.contact-section input,
+.contact-section textarea {
+    padding: 10px;
+    width: 80%;
+    max-width: 400px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.contact-section button {
+    padding: 10px 20px;
+    background-color: #E39B62;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-section button:hover {
+    background-color: #d1824e;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .project-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-section,
+    .text-section {
+        flex: none;
+        width: 100%;
+    }
+
+    .cta-button {
+        width: 100%;
+        padding: 10px;
+    }
+}

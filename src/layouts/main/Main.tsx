@@ -31,11 +31,11 @@ const Main: React.FC = () => {
     <div className="landing-container">
       <div className="landing-text-section">
         <h1>
-          Քո <span style={{ color: "#E39B62", fontWeight: "bold" }}>երազանքների</span> տունը սպասում է քեզ
+          Քո <span style={{ color: "#EBC886", fontWeight: "bold" }}>երազանքների</span> տունը սպասում է քեզ
         </h1>
         <p>
-          Մենք <span style={{ color: "#E39B62", fontWeight: "bold" }}>հաստատ գիտենք</span>, որ նոր տունը նշանակում է նոր հնարավորություններ։ Սկսեք ձեր նոր կյանքը{" "}
-          <span style={{ color: "#E39B62", fontWeight: "bold" }}>մեզ հետ</span>, որտեղ երազանքները իրականություն են դառնում։
+          Մենք <span style={{ color: "#EBC886", fontWeight: "bold" }}>հաստատ գիտենք</span>, որ նոր տունը նշանակում է նոր հնարավորություններ։ Սկսեք ձեր նոր կյանքը{" "}
+          <span style={{ color: "#EBC886", fontWeight: "bold" }}>մեզ հետ</span>, որտեղ երազանքները իրականություն են դառնում։
         </p>
 
         <div className="button-container">
