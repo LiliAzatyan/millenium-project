@@ -10,17 +10,22 @@
   font-size: 18px;
   transition: all 0.3s ease-in-out;
   background-color: white;
+  box-shadow: 0 4px 10px rgba(126, 126, 126, 0.1);
 }
 
 .nav-container.scrolled {
   background-color: var(--dark-transparent);
+  box-shadow: none;
 }
 
 /* Logo */
 .logo {
-  font-size: 30px;
-  font-weight: bold;
-  color: var(--main-color);
+  height: 66px;
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.logo:hover {
+  transform: scale(1.1);
 }
 
 /* Navigation links */
@@ -29,7 +34,7 @@
   color: var(--main-color);
   text-decoration: none;
   font-weight: bold;
-  transition: color 0.3s ease, background-color 0.3s ease;
+  transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease-in-out, letter-spacing 0.3s ease;
 }
 
 .nav-link:hover {
@@ -37,6 +42,10 @@
   transform: scale(1.1);
   letter-spacing: 1px;
   color: #2E2E2E;
+}
+
+.nav-link:hover .nav-container.scrolled {
+  color: white;
 }
 
 /* Dropdown */
@@ -54,6 +63,8 @@
   transition: all 0.3s ease;
   border-radius: 6px;
   font-size: 16px;
+  transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease-in-out, letter-spacing 0.3s ease;
+
 }
 
 .dropdown-btn:hover {
